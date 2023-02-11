@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To my love</title>
+    <link rel="stylesheet" href="style.css?v2">
+    <meta name="description" content="Gửi Em, người con gái anh yêu...">
+</head>
+<body>
+    <div class="wapper">
+
+        <section id="bground"></section>
+
+        <section id="message" class="max-h100">
+            <img class="max-w100 icon-mess" src="img/santa-hi.png" alt="" srcset="">
+            <div class="box-mess pd-2 bdr-30 fs-1x5" id="add-keyfame">
+                Ping Pong Ping Pong, bất ngờ chưa nà ^^! Cho xin tý nhạc đêy em ưi...
+            </div>
+        </section>
+
+        <section id="letter">
+            
+        </section>
+
+        <div id="couple">
+
+        </div>
+
+        <section id="nav">
+            <ul>
+                <li><button class="btn-nav effect-sound" id="btn-sound" onclick="playMusic()"><img class="max-w100" src="img/musical-note.png" alt="" srcset=""></button></li>
+
+                <li><button class="btn-nav"  id="btn-next"><img class="max-w100"  src="img/right-arrow.png" alt="" srcset="" onclick="start()"></button></li>
+
+                <li><button class="btn-nav"  id="btn-prev" onclick="reload()"><img class="max-w100"  src="img/left-arrow.png" alt="" srcset=""></button></li>
+            </ul>
+        </section>
+
+        <!-- sound -->
+        <section id="music">
+            <audio controls id="audio" data-value="off" loop>
+                <source src="music/music.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        
+    </div>
+    <script>
+
+        var htmlP = '<div class="letter01">';
+
+                htmlP += '<p>Chào Em, người con gái anh yêu nè :3.</p>'; 
+                htmlP += '</br>';
+                htmlP += '<p>';
+                    htmlP += 'Vậy là một năm nữa sắp qua rồi, mình theo Phật nên chắc cũng ko chúc giáng sinh an lành đâu ha :v. Nhưng Đạo nào cũng là Đạo, cũng mong người ta sống tốt hết thôi hè. Vậy nên anh cũng hưởng ứng cái không khí ấy để viết cho Em đôi dòng này nè...';
+                htmlP += '</p>';
+                htmlP += '<p>';
+                    htmlP += '</br>';
+                    htmlP += '<p>Chúc Em những ngày cuối năm luôn vui vẻ bớt quạo nè, an yên trong tình yêu của gia đình và của anh nữa nha :3. Còn lại để sang năm mới chúc tiếp nha :v.</p>';
+                    htmlP += '</br>';
+                    htmlP += '<p>Thời gian qua cám ơn Em đã đồng hành cùng anh, cùng anh trải qua bao nhiêu là chuyện, buồn nhiều hơn là vui :3.</p>';
+                    htmlP += '</br>';
+                    htmlP += '<p>Mong hai ta sẽ cùng nhau đồng hành và viết tiếp những câu chuyện trên đoạn đường dài sắp tới, để sau này trước hiên nhà, ly trà ấm, hai ta có thể kể cho lũ trẻ nghe những điều chúng ta đã trải qua. Cùng anh thực hiện điều đó nha...</p>';
+                htmlP += '</p>';
+                    htmlP += '</br>';
+                htmlP += '<p>';
+                    htmlP += 'Cám ơn Em vì tất cả, người con gái anh yêu...';
+                htmlP += '</p>';
+                    htmlP += '</br>';
+                htmlP += '<p>';
+                    htmlP += 'Đứng hình mất 2s: Nếu Em có ở nhà thì xuống dưới đi nha, biết đâu anh đang đứng trước cổng nhà Em đó :v.';
+                htmlP += '</p>';
+                htmlP += '</br>';
+
+                htmlP += '<p class="text-r">';
+                    htmlP += '<i>Tái bút: Chàng trai của em</i>';
+                htmlP += '</p>';   
+                htmlP += '<p class="text-r">';
+                    htmlP += '<i>Yêu em 3000</i>';
+                htmlP += '</p>';    
+
+                htmlP += '<p class="text-r">';
+                    htmlP += '<i>From Christmas 2021 to 2121</i>';
+                htmlP += '</p>';
+                
+
+            htmlP += '</div>';
+
+        function playMusic() {
+            let audioEle = document.getElementById('audio');
+            let btnSound = document.getElementById("btn-sound");
+            let bground = document.getElementById("bground");
+            let boxMess = document.getElementsByClassName("box-mess")[0];
+
+            if(audioEle.getAttribute('data-value') == 'off'){
+                audioEle.play();
+                audioEle.setAttribute('data-value', 'on');
+                btnSound.firstChild.style.opacity = "1";
+                bground.style.opacity = "1";
+                boxMess.innerHTML = "Nhấn nút <span class='text-green'>xanh xanh</span> để xem tiếp nè...";
+            } else{
+                audioEle.pause();
+                audioEle.setAttribute('data-value', 'off');
+                btnSound.firstChild.style.opacity = "0.3";
+                bground.style.opacity = "0.3";
+                boxMess.innerHTML = "Lên nhạc đi Em ơi...";
+            }
+        }
+
+        function reset(params) {
+            let bground = document.getElementById("bground");
+            // header.style.backgroundImage = "url('')"
+            bground.style.opacity = "0.3";
+        }
+
+        function start(params) {
+            let bground = document.getElementById("bground");
+            let messStart = document.getElementById("message");
+
+            messStart.style.display = "none";
+            bground.style.backgroundImage = "url('img/bg.jpeg')";
+            bground.style.opacity = "1";
+            bground.innerHTML = "";
+
+            for (let index = 0; index < 20; index++) {
+                createSnow(index);
+            }
+
+            let letter = document.getElementById("letter");
+            letter.innerHTML = htmlP;
+
+            setInterval(function () {
+                // setTimeout(() => {
+                    renderImagesCouple();
+                // }, 3000);
+            }, 4000);
+            
+        }
+
+        function getRandomPosition(element) {
+
+            let bground = document.getElementById("bground")
+
+            var x = bground.offsetHeight-element.clientHeight;
+            var y = bground.offsetWidth-element.clientWidth;
+            var randomX = Math.floor(Math.random()*x);
+            var randomY = Math.floor(Math.random()*y);
+            return [randomX,randomY];
+        }
+
+        function createSnow(index) {
+            var img = document.createElement('img');
+            img.setAttribute("style", "position:absolute;");
+            img.setAttribute("src", "img/snow.png");
+            img.setAttribute("id", "img_"+index);
+            img.setAttribute("class", "img_snow");
+
+            let bground = document.getElementById("bground");
+            bground.appendChild(img);
+
+            var xy = getRandomPosition(img);
+            img.style.top = xy[0] + 'px';
+            img.style.left = xy[1] + 'px';
+            img.style.width = xy[0]/10 + 'px';
+            img.style.height = xy[0]/10 + 'px';
+        }
+
+        function renderPosition() {
+            for (let index = 0; index < 20; index++) {
+                var img = document.getElementById('img_'+index);
+                var xy = getRandomPosition(img);
+                img.style.top = xy[0] + 'px';
+                img.style.left = xy[1] + 'px';
+            }
+        }
+
+        window.onload = function () {
+            for (let index = 0; index < 20; index++) {
+                createSnow(index);
+            }
+        }
+
+        setInterval(function () {
+            renderPosition();
+        }, 1000);
+
+        function renderImagesCouple() {
+            let couple = document.getElementById("couple");
+            couple.innerHTML = "";
+
+            let img = document.createElement("img");
+            let num = randomInteger(1,9);
+            img.setAttribute("src", "img/e" + num + ".png");
+            couple.appendChild(img);
+            setTimeout(() => {
+                couple.innerHTML = "";
+            }, 3000);
+        }
+
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function reload() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
