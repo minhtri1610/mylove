@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine 2023</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <section id="wapper-container-box1">
+        <div class="container-header">
+            <div class="heart">
+                <i class="fa fa-heartbeat"></i>
+            </div>
+        </div>
+
+        <!-- nav button -->
+        <section id="nav">
+            <ul>
+                <li><button class="btn-nav effect-sound" id="btn-sound" onclick="playMusic()"><img class="max-w100" src="../files-common/img/musical-note.png" alt="" srcset=""></button></li>
+
+                <li><button class="btn-nav"  id="btn-next"><img class="max-w100"  src="../files-common/img/right-arrow.png" alt="" srcset="" onclick="start()"></button></li>
+
+                <li><button class="btn-nav"  id="btn-prev" onclick="reload()"><img class="max-w100"  src="../files-common/img/left-arrow.png" alt="" srcset=""></button></li>
+            </ul>
+        </section>
+
+        <!-- sound -->
+        <section id="music">
+            <audio controls id="audio" data-value="off" loop>
+                <source src="music/music.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        
+        <!-- end nav button -->
+    </section>
+</body>
+</html>

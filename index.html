@@ -6,8 +6,18 @@
     <title>To My Love</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
+    <div class="container-header">
+        <div class="heart">
+            <i class="fa fa-heartbeat"></i>
+        </div>
+    </div>
+    <div class="text-transf">
+        <h4 class="introduction-text">Text 01!</h4>
+    </div>
     <div class="container">
         <div class="timeline">
             <div class="timeline-container primary">
@@ -16,9 +26,12 @@
                     <!-- <i class="far fa-grin-wink"></i> -->
                 </div>
                 <div class="timeline-body">
-                    <h4 class="timeline-title"><span class="badge">24/12/2021</span></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                    <p class="timeline-subtitle">1 Hours Ago</p>
+                    <h4 class="timeline-title"><span class="badge">KỶ NIỆM NGÀY GẶP THẢO KHÙNG 24/12/2021</span></h4>
+                    <p>Đó là 1 ngày ...</p>
+                    <p class="descript-text">
+                        <a href="#" rel="noopener noreferrer">Xem lại khoảnh khắc ... </a>
+                    </p>
+                    <p class="timeline-subtitle" data-date='2021/12/24' data-id='date-start'></p>
                 </div>
             </div>
             <div class="timeline-container danger">
@@ -30,7 +43,10 @@
                 <div class="timeline-body">
                     <h4 class="timeline-title"><span class="badge">Giáng Sinh đầu tiên (2022)</span></h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                    <p class="timeline-subtitle">2 Hours Ago</p>
+                    <p class="descript-text">
+                        <a href="./giangsinh-2022/index.html" target="_blank" rel="noopener noreferrer">Xem lại khoảnh khắc ... </a>
+                    </p>
+                    <p class="timeline-subtitle" data-date='2022/12/24' data-id='date-xmas-2022'></p>
                 </div>
             </div>
             <div class="timeline-container success">
@@ -40,7 +56,7 @@
                 <div class="timeline-body">
                     <h4 class="timeline-title"><span class="badge">Kỷ niệm 1 năm bên nhau</span></h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                    <p class="timeline-subtitle">6 Hours Ago</p>
+                    <p class="timeline-subtitle" data-date='2022/12/24' data-id='date-ani-1y'></p>
                 </div>
             </div>
             <div class="timeline-container warning">
@@ -51,7 +67,10 @@
                 <div class="timeline-body">
                     <h4 class="timeline-title"><span class="badge">Valentine 2023</span></h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                    <p class="timeline-subtitle">1 Day Ago</p>
+                    <p class="timeline-subtitle" data-date='2023/14/02' data-id='date-valen-2023'></p>
+                    <div class="active-momment" data-date="14-02-2023">
+                        
+                    </div>
                 </div>
             </div>
             <!-- <div class="timeline-container">
@@ -76,5 +95,21 @@
             </div>
         </div>
     </div>
+
+    <!-- nav button -->
+    <section id="nav">
+        <ul>
+            <li><button class="btn-nav effect-sound" id="btn-sound" onclick="playMusic()"><img class="max-w100" src="./files-common/img/musical-note.png" alt="" srcset=""></button></li>
+        </ul>
+    </section>
+
+    <!-- sound -->
+    <section id="music">
+        <audio controls id="audio" data-value="off" loop>
+            <source src="./files-common/music/index.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <!-- end nav button -->
 </body>
 </html>
