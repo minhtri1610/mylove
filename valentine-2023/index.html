@@ -6,14 +6,34 @@
     <title>Valentine 2023</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <section id="wapper-container-box1">
-        <div class="container-header">
+        <!-- <div class="container-header">
             <div class="heart">
                 <i class="fa fa-heartbeat"></i>
             </div>
+        </div> -->
+
+        <canvas id="neon-heart" width="300" height="400"></canvas>
+
+        <div class="content-text" id="text-trailer">
+            <h2>Text here....</h2>
+        </div>
+
+        <div class="content-message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nesciunt deserunt voluptates magnam debitis, corrupti ipsa voluptatum commodi, asperiores vel sunt labore eius error ex? Earum quas ad accusamus alias.
+        </div>
+
+        <div class="wapper-content-image">
+            <ul>
+                <li><img class="val-img" src="../files-common/img/val-2023/05.png" alt=""></li>
+                <li><img class="val-img" src="../files-common/img/val-2023/02.png" alt=""></li>
+                <li><img class="val-img" src="../files-common/img/val-2023/03.png" alt=""></li>
+                <li><img class="val-img" src="../files-common/img/val-2023/04.png" alt=""></li>
+                <li><img class="val-img" src="../files-common/img/val-2023/01.png" alt=""></li>
+            </ul>
         </div>
 
         <!-- nav button -->
@@ -21,20 +41,25 @@
             <ul>
                 <li><button class="btn-nav effect-sound" id="btn-sound" onclick="playMusic()"><img class="max-w100" src="../files-common/img/musical-note.png" alt="" srcset=""></button></li>
 
-                <li><button class="btn-nav"  id="btn-next"><img class="max-w100"  src="../files-common/img/right-arrow.png" alt="" srcset="" onclick="start()"></button></li>
+                <li><button class="btn-nav"  id="btn-next"><img class="max-w100"  src="../files-common/img/right-arrow.png" alt="" srcset="" onclick="start_val()"></button></li>
 
-                <li><button class="btn-nav"  id="btn-prev" onclick="reload()"><img class="max-w100"  src="../files-common/img/left-arrow.png" alt="" srcset=""></button></li>
+                <li><button class="btn-nav"  id="btn-prev" onclick="reload_val()"><img class="max-w100"  src="../files-common/img/left-arrow.png" alt="" srcset=""></button></li>
+                
+                <li><a href="../index.html"><i class="fas fa-home a-home"></i></a></li>
             </ul>
         </section>
 
         <!-- sound -->
         <section id="music">
             <audio controls id="audio" data-value="off" loop>
-                <source src="music/music.mp3" type="audio/mpeg">
+                <source src="../files-common/music/val-01.mp3" type="audio/mpeg">
             </audio>
         </section>
-        
         <!-- end nav button -->
     </section>
+    <!-- js -->
+    <script src="../common.js"></script>
+    <script src="../files-common/js/heart-neon.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

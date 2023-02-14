@@ -1,20 +1,13 @@
-function playMusic() {
-    let audioEle = document.getElementById('audio');
-    let btnSound = document.getElementById("btn-sound");
-    let bground = document.getElementById("bground");
-    let boxMess = document.getElementsByClassName("box-mess")[0];
+function reload_val() {
+    location.reload();
+}
 
-    if(audioEle.getAttribute('data-value') == 'off'){
-        audioEle.play();
-        audioEle.setAttribute('data-value', 'on');
-        btnSound.firstChild.style.opacity = "1";
-        bground.style.opacity = "1";
-        boxMess.innerHTML = "Nhấn nút <span class='text-green'>xanh xanh</span> để xem tiếp nè...";
-    } else{
-        audioEle.pause();
-        audioEle.setAttribute('data-value', 'off');
-        btnSound.firstChild.style.opacity = "0.3";
-        bground.style.opacity = "0.3";
-        boxMess.innerHTML = "Lên nhạc đi Em ơi...";
-    }
+function start_val() {
+    $('#neon-heart').css('opacity', "0.2")
+    $('#text-trailer').hide()
+    $('.content-message').show()
+    $('.wapper-content-image').show()
+    playMusic()
+    let audioEle = document.getElementById('audio');
+    audioEle.play();
 }

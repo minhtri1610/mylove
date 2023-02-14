@@ -8,6 +8,7 @@
 	 font-family: 'K2D', sans-serif;
 	 background: #ffb5ce;
 	 letter-spacing: 1px;
+	 margin: 0;
 }
 .container {
 	 max-width: 650px;
@@ -147,7 +148,7 @@ p {
 .container-header{
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .heart {
@@ -288,6 +289,7 @@ p {
         max-width: 400px;
         margin: 50px auto;
     }
+
     .timeline .timeline-container .timeline-icon {
         position: absolute;
         left: -84px;
@@ -295,13 +297,42 @@ p {
         width: 45px;
         height: 45px;
     }
+
+	.timeline .timeline-container .timeline-icon i{
+		font-size: 1.4rem;
+	}
+
+	.timeline .timeline-container .timeline-body:before{
+		width: 15px;
+		height: 15px;
+		left: -5px;
+		top: 10px;
+	}
+	.timeline .timeline-container {
+		max-width: 295px;
+	}
 }
 
 @media (max-width: 390px) {
-    
+    .timeline .timeline-container .timeline-icon i{
+		font-size: 1.3rem;
+	}
+	.timeline .timeline-container {
+		max-width: 275px;
+	}
 }
 
 @media (max-width: 360px) {
-    
+    .timeline .timeline-container .timeline-icon {
+		position: absolute;
+		left: -45px;
+		top: -1px;
+		width: 30px;
+		height: 30px;
+	}
+	.timeline {
+		position: relative;
+		padding-left: 2rem;
+	}
 }
 /* end css responsive */
