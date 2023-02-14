@@ -129,7 +129,7 @@ body{
 .content-text h2{
     color: #fffc00;
     animation: heart-beat 1s ease-out infinite;
-    text-align: justify;
+    text-align: center;
 }
 
 #wapper-container-box1{
@@ -140,6 +140,7 @@ body{
     top: 5vh;
     right: 2%;
     left: 2%;
+    overflow-y: scroll;
     display: none;
 
     transition: .1s;
@@ -217,6 +218,7 @@ body{
     width: 225px;
     margin: 0 25%;
     top: -56px;
+    opacity: 0.6;
 }
 @media (max-width: 428px) {
     .wapper-content-image ul
