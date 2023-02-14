@@ -30,6 +30,7 @@ $(function () {
         html_text_mm = '<a href="'+ link_mm + '" rel="noopener noreferrer">Xem khoảnh khắc ... </a>';
     }
     ele_check_momment.html(html_text_mm)
+
 })
 
 function checkDateNow(str_date) {

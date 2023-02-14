@@ -1,5 +1,6 @@
 function playMusic() {
     let audioEle = document.getElementById('audio');
+    console.log(audioEle)
     let btnSound = document.getElementById("btn-sound");
     // let bground = document.getElementById("bground");
     // let boxMess = document.getElementsByClassName("box-mess")[0];

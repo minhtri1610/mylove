@@ -129,6 +129,7 @@ body{
 .content-text h2{
     color: #fffc00;
     animation: heart-beat 1s ease-out infinite;
+    text-align: justify;
 }
 
 #wapper-container-box1{
@@ -136,9 +137,9 @@ body{
 }
 
 .content-message{
-    top: 10vh;
-    right: 2vh;
-    left: 2vh;
+    top: 5vh;
+    right: 2%;
+    left: 2%;
     display: none;
 
     transition: .1s;
@@ -209,7 +210,14 @@ body{
         transform: translateX(-180%);
     }
 }
-
+.container-header-val img{
+    max-width: 100%;
+    position: absolute;
+    z-index: 999;
+    width: 225px;
+    margin: 0 25%;
+    top: -56px;
+}
 @media (max-width: 428px) {
     .wapper-content-image ul
     {

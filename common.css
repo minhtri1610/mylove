@@ -183,8 +183,8 @@ p {
 
 .introduction-text {
     color: #fff;
-    margin-top: 3rem;
-    animation: moving-text 5s linear infinite;
+    margin: 3rem auto;
+    animation: heart-beat 1s ease-out infinite;
     max-width: 270px;
     text-align: center;
 }
