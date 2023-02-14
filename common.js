@@ -18,3 +18,7 @@ function playMusic() {
         // boxMess.innerHTML = "Lên nhạc đi Em ơi...";
     }
 }
+
+function viewMoment() {
+    alert('chưa làm nơi, chờ hí...')
+}

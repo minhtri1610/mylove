@@ -124,10 +124,10 @@ body{
     justify-content: center;
     position: fixed;
     top: 20vh;
-    left: 5vh;
+    left: 20%;
 }
 .content-text h2{
-    color: #fff;
+    color: #fffc00;
     animation: heart-beat 1s ease-out infinite;
 }
 
