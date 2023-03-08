@@ -19,8 +19,9 @@ $(function () {
     let data_val_2023 = elm_valentine_2023.attr('data-date')
     elm_valentine_2023.text(checkDateNow(data_val_2023))
 
+
     // check momment
-    const link_mm = "./valentine-2023/index.html"
+    const link_mm = "./8-3-2023/index.html"
     const ele_check_momment = $('.active-momment')
     let data_check_momment= ele_check_momment.attr('data-date')
     
@@ -37,7 +38,7 @@ function checkDateNow(str_date) {
     var currentDate = new Date();
     var targetDate = new Date(str_date);
     var timeDifference = currentDate - targetDate;
-    var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    var daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
     // console.log(daysDifference)
     return calculatorDateNow(daysDifference)
 }
@@ -57,12 +58,12 @@ function calculatorDateNow(days) {
         case days == 365:
         case days == 366:
             return ' one year ago';
-        case (days < 365) && days >= 10 :
+        case (days < 365) && days >= 30 :
             return convertToMonth(days) + ' months ago';
         case days > 365:
             return convertToYears(days) + ' year ago';
         default:
-            return days;
+            return days + ' days';
     }
 }
 
@@ -85,4 +86,8 @@ function checkWhatIsMoment(str_date) {
     }
     return false;
 
+}
+
+function checkAuth(pass) {
+    
 }
