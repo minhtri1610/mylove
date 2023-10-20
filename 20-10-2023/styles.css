@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Màu nền trang */
+}
+
+.gift-container {
+    position: relative;
+}
+
+
+.gift-box {
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #e74c3c; /* Màu hộp quà */
+    border: 2px solid #c0392b; /* Viền hộp quà */
+    border-radius: 10px; /* Độ bo góc hộp quà */
+}
+.toppic{
+    color: #fff;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#giftImage {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    position: relative;
+    animation: scaleGift 1.5s alternate infinite;
+    transform: translate(-50%, -50%); /* Để căn giữa hình ảnh */
+}
+
+.show{
+    display: block!important;
+}
+.hidden {
+    display: none;
+}
+
+.rose{
+    max-width: 100%;
+    width: 150px;
+    position: absolute;
+    left: -30%;
+    bottom: -60%;
+}
+
+.gift-container{
+    /* display: none; */
+}
+
+.letter-wapper{
+    display: none;
+    width: 100vh;
+    height: 100vh;
+    position: relative;
+    background-image: url(bg-all.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.letter-content{
+    border-radius: 12px;
+    border: 1px solid #e74c3c;
+    box-shadow: 1px 3px 4px pink;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    /* align-items: center; */
+    padding: 10px;
+    background: #e91e63a6;
+    min-height: 65vh;
+    color: #fff;
+    font-family: monospace;
+    animation: scaleGift2 1.5s alternate infinite;
+    transform: translate(-50%, -50%); /* Để căn giữa hình ảnh */
+
+}
+
+
+
+.up-bg{
+    background-image: url('bg-up.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.down-bg{
+    background-image: url('bg-down.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes scaleGift {
+    0% {
+        transform: scale(1); /* Kích thước bình thường */
+    }
+    100% {
+        transform: scale(1.5); /* Kích thước lớn hơn */
+    }
+}
+
+@keyframes scaleGift2 {
+    0% {
+        transform: scale(0.75); /* Kích thước bình thường */
+    }
+    100% {
+        transform: scale(1.1); /* Kích thước lớn hơn */
+    }
+}
