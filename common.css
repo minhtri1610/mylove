@@ -6,7 +6,7 @@
 }
  body {
 	 font-family: 'K2D', sans-serif;
-	 background: #ffb5ce;
+	 background: linear-gradient(178deg, #6a00ff, #feabab);
 	 letter-spacing: 1px;
 	 margin: 0;
 }
